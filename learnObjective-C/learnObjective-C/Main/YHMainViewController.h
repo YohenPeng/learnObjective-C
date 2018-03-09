@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  YHMainViewController.h
 //  learnObjective-C
 //
 //  Created by peng yihan on 2018/3/9.
@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YHBaseViewController.h"
 
-@interface ViewController : UIViewController
-
+@interface YHMainViewController : YHBaseViewController
 
 @end
-

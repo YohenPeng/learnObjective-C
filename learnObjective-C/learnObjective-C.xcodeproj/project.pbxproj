@@ -8,24 +8,39 @@
 
 /* Begin PBXBuildFile section */
 		E52FED3120525BC600734A99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E52FED3020525BC600734A99 /* AppDelegate.m */; };
-		E52FED3420525BC600734A99 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E52FED3320525BC600734A99 /* ViewController.m */; };
 		E52FED3720525BC600734A99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E52FED3520525BC600734A99 /* Main.storyboard */; };
 		E52FED3920525BC800734A99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E52FED3820525BC800734A99 /* Assets.xcassets */; };
 		E52FED3C20525BC800734A99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E52FED3A20525BC800734A99 /* LaunchScreen.storyboard */; };
 		E52FED3F20525BC800734A99 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E52FED3E20525BC800734A99 /* main.m */; };
+		E52FED4820525CB100734A99 /* YHMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E52FED4720525CB100734A99 /* YHMainViewController.m */; };
+		E52FED4B20525D3000734A99 /* YHNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E52FED4A20525D3000734A99 /* YHNavViewController.m */; };
+		E52FED4F20525D5A00734A99 /* YHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E52FED4E20525D5A00734A99 /* YHBaseViewController.m */; };
+		E52FED5520525F6800734A99 /* YHView.m in Sources */ = {isa = PBXBuildFile; fileRef = E52FED5420525F6800734A99 /* YHView.m */; };
+		E52FED5820525F8B00734A99 /* YHTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E52FED5720525F8B00734A99 /* YHTableView.m */; };
+		E52FED5B20525FC800734A99 /* YHBaseTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E52FED5A20525FC800734A99 /* YHBaseTableViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E52FED2C20525BC600734A99 /* learnObjective-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "learnObjective-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E52FED2F20525BC600734A99 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E52FED3020525BC600734A99 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E52FED3220525BC600734A99 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E52FED3320525BC600734A99 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E52FED3620525BC600734A99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E52FED3820525BC800734A99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E52FED3B20525BC800734A99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E52FED3D20525BC800734A99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E52FED3E20525BC800734A99 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E52FED4620525CB100734A99 /* YHMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHMainViewController.h; sourceTree = "<group>"; };
+		E52FED4720525CB100734A99 /* YHMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHMainViewController.m; sourceTree = "<group>"; };
+		E52FED4920525D3000734A99 /* YHNavViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHNavViewController.h; sourceTree = "<group>"; };
+		E52FED4A20525D3000734A99 /* YHNavViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHNavViewController.m; sourceTree = "<group>"; };
+		E52FED4D20525D5A00734A99 /* YHBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHBaseViewController.h; sourceTree = "<group>"; };
+		E52FED4E20525D5A00734A99 /* YHBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHBaseViewController.m; sourceTree = "<group>"; };
+		E52FED5320525F6800734A99 /* YHView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHView.h; sourceTree = "<group>"; };
+		E52FED5420525F6800734A99 /* YHView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHView.m; sourceTree = "<group>"; };
+		E52FED5620525F8B00734A99 /* YHTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHTableView.h; sourceTree = "<group>"; };
+		E52FED5720525F8B00734A99 /* YHTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHTableView.m; sourceTree = "<group>"; };
+		E52FED5920525FC800734A99 /* YHBaseTableViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHBaseTableViewModel.h; sourceTree = "<group>"; };
+		E52FED5A20525FC800734A99 /* YHBaseTableViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHBaseTableViewModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +73,10 @@
 		E52FED2E20525BC600734A99 /* learnObjective-C */ = {
 			isa = PBXGroup;
 			children = (
+				E52FED4C20525D3800734A99 /* Base */,
+				E52FED4520525C8900734A99 /* Main */,
 				E52FED2F20525BC600734A99 /* AppDelegate.h */,
 				E52FED3020525BC600734A99 /* AppDelegate.m */,
-				E52FED3220525BC600734A99 /* ViewController.h */,
-				E52FED3320525BC600734A99 /* ViewController.m */,
 				E52FED3520525BC600734A99 /* Main.storyboard */,
 				E52FED3820525BC800734A99 /* Assets.xcassets */,
 				E52FED3A20525BC800734A99 /* LaunchScreen.storyboard */,
@@ -69,6 +84,56 @@
 				E52FED3E20525BC800734A99 /* main.m */,
 			);
 			path = "learnObjective-C";
+			sourceTree = "<group>";
+		};
+		E52FED4520525C8900734A99 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E52FED4620525CB100734A99 /* YHMainViewController.h */,
+				E52FED4720525CB100734A99 /* YHMainViewController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		E52FED4C20525D3800734A99 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E52FED5220525F3F00734A99 /* ViewModel */,
+				E52FED5120525F3500734A99 /* View */,
+				E52FED5020525F1300734A99 /* Controller */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		E52FED5020525F1300734A99 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E52FED4920525D3000734A99 /* YHNavViewController.h */,
+				E52FED4A20525D3000734A99 /* YHNavViewController.m */,
+				E52FED4D20525D5A00734A99 /* YHBaseViewController.h */,
+				E52FED4E20525D5A00734A99 /* YHBaseViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E52FED5120525F3500734A99 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E52FED5320525F6800734A99 /* YHView.h */,
+				E52FED5420525F6800734A99 /* YHView.m */,
+				E52FED5620525F8B00734A99 /* YHTableView.h */,
+				E52FED5720525F8B00734A99 /* YHTableView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E52FED5220525F3F00734A99 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E52FED5920525FC800734A99 /* YHBaseTableViewModel.h */,
+				E52FED5A20525FC800734A99 /* YHBaseTableViewModel.m */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +206,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E52FED3420525BC600734A99 /* ViewController.m in Sources */,
+				E52FED4B20525D3000734A99 /* YHNavViewController.m in Sources */,
+				E52FED5B20525FC800734A99 /* YHBaseTableViewModel.m in Sources */,
+				E52FED5820525F8B00734A99 /* YHTableView.m in Sources */,
 				E52FED3F20525BC800734A99 /* main.m in Sources */,
+				E52FED4820525CB100734A99 /* YHMainViewController.m in Sources */,
+				E52FED4F20525D5A00734A99 /* YHBaseViewController.m in Sources */,
 				E52FED3120525BC600734A99 /* AppDelegate.m in Sources */,
+				E52FED5520525F6800734A99 /* YHView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
