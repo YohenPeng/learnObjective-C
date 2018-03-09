@@ -12,6 +12,9 @@
 
 @interface YHMainViewController ()
 @property(nonatomic,strong)YHTableView *tableView;
+@property(nonatomic,strong)YHBaseTableViewModel *tableViewModel;
+
+@property(nonatomic,strong)NSArray *dataArray;
 @end
 
 @implementation YHMainViewController
@@ -32,6 +35,21 @@
         _tableView = [[YHTableView alloc]init];
     }
     return _tableView;
+}
+
+-(YHBaseTableViewModel *)tableViewModel{
+    if (!_tableViewModel) {
+        _tableViewModel = [[YHBaseTableViewModel alloc]initWithTable:self.tableView];
+    }
+    
+    return _tableViewModel;
+}
+
+-(NSArray *)dataArray{
+    if (!_dataArray) {
+        _dataArray = @[@[@"屏幕外截图",@"YHOutScreenShotController"]];
+    }
+    return _dataArray;
 }
 
 /*

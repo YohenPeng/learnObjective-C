@@ -23,5 +23,7 @@ typedef void(^YHDidSelectRowAtIndexPath)(UITableView *tableView,NSIndexPath inde
 
 -(void)setupDidSelectRowAtIndexPath:(YHDidSelectRowAtIndexPath)block;
 
+-(void)reload;
+
 
 @end
