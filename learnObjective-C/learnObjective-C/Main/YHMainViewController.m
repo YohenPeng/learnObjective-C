@@ -22,6 +22,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"主页面";
+    [self.view addSubview:self.tableView];
+    [self.tableViewModel reload];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,7 +35,8 @@
 
 -(YHTableView *)tableView{
     if (!_tableView) {
-        _tableView = [[YHTableView alloc]init];
+        _tableView = [[YHTableView alloc]initWithFrame:self.view.frame];
+        _tableView.rowHeight = 44;
     }
     return _tableView;
 }
@@ -40,10 +44,36 @@
 -(YHBaseTableViewModel *)tableViewModel{
     if (!_tableViewModel) {
         _tableViewModel = [[YHBaseTableViewModel alloc]initWithTable:self.tableView];
+        typeof(self) __weak weakSelf = self;
+        [_tableViewModel setupCellForRowAtIndexPath:^UITableViewCell *(UITableView *tableView, NSIndexPath *indexPath) {
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellId"];
+            if (!cell) {
+                cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellId"];
+            }
+            typeof(self) __strong strongSelf = weakSelf;
+            NSArray *array = [strongSelf.dataArray objectAtIndex:indexPath.row];
+            cell.textLabel.text = [array objectAtIndex:0];
+            return cell;
+            
+        }];
+        
+        [_tableViewModel setupNumberOfRowsInSection:^NSInteger(UITableView *tableView, NSInteger section) {
+            typeof(self) __strong strongSelf = weakSelf;
+            return strongSelf.dataArray.count;
+        }];
+        
+        [_tableViewModel setupDidSelectRowAtIndexPath:^(UITableView *tableView, NSIndexPath *indexPath) {
+            typeof(self) __strong strongSelf = weakSelf;
+            NSString *controllerString = [[strongSelf.dataArray objectAtIndex:indexPath.row] objectAtIndex:1];
+            UIViewController *vc = [NSClassFromString(controllerString) new];
+            [strongSelf.navigationController pushViewController:vc animated:YES];
+        }];
+        
     }
     
     return _tableViewModel;
 }
+
 
 -(NSArray *)dataArray{
     if (!_dataArray) {

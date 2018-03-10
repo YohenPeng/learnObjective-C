@@ -10,8 +10,8 @@
 #import <UIKit/UIKit.h>
 
 typedef NSInteger(^YHNumberOfRowsInSection)(UITableView *tableView,NSInteger section);
-typedef UITableViewCell *(^YHCellForRowAtIndexPath)(UITableView *tableView,NSIndexPath indexPath);
-typedef void(^YHDidSelectRowAtIndexPath)(UITableView *tableView,NSIndexPath indexPath);
+typedef UITableViewCell *(^YHCellForRowAtIndexPath)(UITableView *tableView,NSIndexPath* indexPath);
+typedef void(^YHDidSelectRowAtIndexPath)(UITableView *tableView,NSIndexPath* indexPath);
 
 @interface YHBaseTableViewModel : NSObject
 
