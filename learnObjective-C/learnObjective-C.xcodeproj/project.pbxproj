@@ -20,6 +20,7 @@
 		E52FED5520525F6800734A99 /* YHView.m in Sources */ = {isa = PBXBuildFile; fileRef = E52FED5420525F6800734A99 /* YHView.m */; };
 		E52FED5820525F8B00734A99 /* YHTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E52FED5720525F8B00734A99 /* YHTableView.m */; };
 		E52FED5B20525FC800734A99 /* YHBaseTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E52FED5A20525FC800734A99 /* YHBaseTableViewModel.m */; };
+		E5BD3D28206E1B340035B2E8 /* HYMainRLTaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BD3D27206E1B330035B2E8 /* HYMainRLTaskManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,8 @@
 		E52FED5720525F8B00734A99 /* YHTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHTableView.m; sourceTree = "<group>"; };
 		E52FED5920525FC800734A99 /* YHBaseTableViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHBaseTableViewModel.h; sourceTree = "<group>"; };
 		E52FED5A20525FC800734A99 /* YHBaseTableViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHBaseTableViewModel.m; sourceTree = "<group>"; };
+		E5BD3D26206E1B330035B2E8 /* HYMainRLTaskManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYMainRLTaskManager.h; sourceTree = "<group>"; };
+		E5BD3D27206E1B330035B2E8 /* HYMainRLTaskManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYMainRLTaskManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +119,8 @@
 		E52FED4520525C8900734A99 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				E5BD3D26206E1B330035B2E8 /* HYMainRLTaskManager.h */,
+				E5BD3D27206E1B330035B2E8 /* HYMainRLTaskManager.m */,
 				E52FED4620525CB100734A99 /* YHMainViewController.h */,
 				E52FED4720525CB100734A99 /* YHMainViewController.m */,
 				E516A1552052687500C24C73 /* YHOutScreenShotController.h */,
@@ -257,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5BD3D28206E1B340035B2E8 /* HYMainRLTaskManager.m in Sources */,
 				E52FED4B20525D3000734A99 /* YHNavViewController.m in Sources */,
 				E52FED5B20525FC800734A99 /* YHBaseTableViewModel.m in Sources */,
 				E516A1572052687500C24C73 /* YHOutScreenShotController.m in Sources */,
@@ -408,7 +414,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "learnObjective-C/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "peng-yihan.learnObjective-C";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -422,7 +431,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "learnObjective-C/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "peng-yihan.learnObjective-C";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
