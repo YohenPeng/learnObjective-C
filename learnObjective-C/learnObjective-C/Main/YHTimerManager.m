@@ -37,7 +37,7 @@
 
 -(NSString *)startTimer:(NSTimeInterval)interval runloopMode:(YHTimerRunLoopMode)mode timeOutFireAction:(YHTimeOutFireAction)action{
     self.timerIndex ++;
-    NSString *timerKey = [NSString stringWithFormat:@"%0.2f##%d",interval,mode];
+    NSString *timerKey = [NSString stringWithFormat:@"%0.2f##%ld",interval,(long)mode];
     NSTimer *timer = [self.timerDic objectForKey:timerKey];
     if (timer == nil) {
         timer = [self createTimer:interval runloopMode:mode timerKey:timerKey];
@@ -59,7 +59,7 @@
 }
 
 -(NSString *)runloopModeString:(YHTimerRunLoopMode)mode{
-    if (mode == YHTimerCommonMode) {
+    if(mode == YHTimerCommonMode) {
         return @"YHTimerCommonMode";
     }else if(mode == YHTimerDefaultMode){
         return @"YHTimerDefaultMode";
