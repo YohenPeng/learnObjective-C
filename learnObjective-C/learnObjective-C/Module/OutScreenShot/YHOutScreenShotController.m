@@ -32,6 +32,11 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"下一页" style:UIBarButtonItemStylePlain target:self action:@selector(nextPage)];
 }
 
+-(void)dealloc{
+    [self.timer invalidate];
+    self.timer = nil;
+}
+
 -(void)nextPage{
     UIViewController *vc = [[UIViewController alloc]init];
     vc.view.backgroundColor = [UIColor blueColor];
@@ -47,8 +52,8 @@
 {
     UIGraphicsBeginImageContextWithOptions(view.bounds.size, YES, 0);
     
-    [view.layer renderInContext:UIGraphicsGetCurrentContext()]; //1  内外都有效果
-    [view drawViewHierarchyInRect:view.bounds afterScreenUpdates:NO]; //2 屏幕外没有效果
+//    [view.layer renderInContext:UIGraphicsGetCurrentContext()]; //1  内外都有效果
+//    [view drawViewHierarchyInRect:view.bounds afterScreenUpdates:NO]; //2 屏幕外没有效果
     [view drawViewHierarchyInRect:view.bounds afterScreenUpdates:YES]; //3  内外都有效果
     
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
