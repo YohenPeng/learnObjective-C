@@ -6,20 +6,20 @@
 //  Copyright © 2018年 peng yihan. All rights reserved.
 //
 
-#import "HYMainRLTaskManager.h"
-@interface HYMainRLTaskManager ()
+#import "YHMainRLTaskManager.h"
+@interface YHMainRLTaskManager ()
 @property(nonatomic,strong)NSMutableArray *mutableTaskArray;
 @property(nonatomic,assign)BOOL isNowObserver;
 @end
 
 
-@implementation HYMainRLTaskManager
+@implementation YHMainRLTaskManager
 
 +(instancetype)shareManager{
-    static HYMainRLTaskManager* instance = nil;
+    static YHMainRLTaskManager* instance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        instance = [[HYMainRLTaskManager alloc] init];
+        instance = [[YHMainRLTaskManager alloc] init];
     });
     return instance;
 }

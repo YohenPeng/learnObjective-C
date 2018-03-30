@@ -10,7 +10,7 @@
 
 typedef void(^HYTask)(void);
 
-@interface HYMainRLTaskManager : NSObject
+@interface YHMainRLTaskManager : NSObject
 
 +(instancetype)shareManager;
 
