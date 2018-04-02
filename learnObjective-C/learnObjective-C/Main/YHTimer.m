@@ -1,18 +1,25 @@
 //
-//  YHTimerManager.m
+//  YHTimer.m
 //  learnObjective-C
 //
 //  Created by peng yihan on 2018/3/30.
 //  Copyright © 2018年 peng yihan. All rights reserved.
 //
 
-#import "YHTimerManager.h"
+#import "YHTimer.h"
+#import <UIKit/UIKit.h>
 
-@interface YHTimerManager ()
+@interface YHTimerManager : NSObject
 @property(strong,nonatomic)NSMutableDictionary<NSString*,NSTimer*> *timerDic;  //key为@(interval)##@(mode)
 @property(strong,nonatomic)NSMutableDictionary<NSString*,YHTimeOutFireAction> *timeOutAcitonDic; //key为@(interval)##@(mode)##@(timerId)
 @property(assign,nonatomic)NSInteger timerIndex;  //timerId递增
+
++(instancetype)shareManager;
+-(NSString *)startTimer:(NSTimeInterval)interval runloopMode:(YHTimerRunLoopMode)mode timeOutFireAction:(YHTimeOutFireAction)action;
+-(void)stopTimer:(NSString *)timerId;
+
 @end
+
 
 @implementation YHTimerManager
 
@@ -53,6 +60,8 @@
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:interval target:self selector:@selector(timeOut:) userInfo:timerKey repeats:YES];
     if (mode == YHTimerCommonMode) {
         [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+    }else if(mode == YHTimerTrackingMode){
+        [[NSRunLoop mainRunLoop] addTimer:timer forMode:UITrackingRunLoopMode];
     }
     NSLog(@"[YHTimerManager createTimer] interval:%0.2f,mode:%@",interval,[self runloopModeString:mode]);
     return timer;
@@ -63,6 +72,8 @@
         return @"YHTimerCommonMode";
     }else if(mode == YHTimerDefaultMode){
         return @"YHTimerDefaultMode";
+    }else if(mode == YHTimerTrackingMode){
+        return @"YHTimerTrackingMode";
     }
     return @"";
 }
@@ -100,5 +111,23 @@
     [self.timeOutAcitonDic removeObjectForKey:timerId];
 }
 
+@end
+
+
+@interface YHTimer ()
+@property(nonatomic,copy)NSString *timerId;
+@end
+
+@implementation YHTimer
+
++(YHTimer *)startTimer:(NSTimeInterval)interval runloopMode:(YHTimerRunLoopMode)mode timeOutFireAction:(YHTimeOutFireAction)action{
+    YHTimer *timer = [[YHTimer alloc]init];
+    timer.timerId = [[YHTimerManager shareManager] startTimer:interval runloopMode:mode timeOutFireAction:action];
+    return timer;
+}
+
+-(void)stop{
+    [[YHTimerManager shareManager] stopTimer:self.timerId];
+}
 
 @end

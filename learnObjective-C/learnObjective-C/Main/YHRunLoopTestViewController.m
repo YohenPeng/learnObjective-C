@@ -7,11 +7,12 @@
 //
 
 #import "YHRunLoopTestViewController.h"
-#import "YHTimerManager.h"
 #import "YHMainRLTaskManager.h"
+#import "YHTimer.h"
 
 @interface YHRunLoopTestViewController ()
 @property(nonatomic,strong)NSMutableArray *array;
+@property(strong,nonatomic)NSMutableArray *timerArray;
 @end
 
 @implementation YHRunLoopTestViewController
@@ -21,48 +22,33 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.array = [NSMutableArray new];
+    self.timerArray = [NSMutableArray new];
     
-    NSString *timerId;
-    timerId = [[YHTimerManager shareManager] startTimer:1 runloopMode:YHTimerDefaultMode timeOutFireAction:^{
+    YHTimer *timer;
+    
+    timer = [YHTimer startTimer:1 runloopMode:YHTimerDefaultMode timeOutFireAction:^{
         NSLog(@"1");
     }];
-    [self.array addObject:timerId];
     
-    timerId = [[YHTimerManager shareManager] startTimer:1 runloopMode:YHTimerDefaultMode timeOutFireAction:^{
-        NSLog(@"1-1");
+    [self.timerArray addObject:timer];
+    
+    timer = [YHTimer startTimer:1 runloopMode:YHTimerCommonMode timeOutFireAction:^{
+        NSLog(@"1");
     }];
-    [self.array addObject:timerId];
     
-    timerId = [[YHTimerManager shareManager] startTimer:2 runloopMode:YHTimerDefaultMode timeOutFireAction:^{
+    [self.timerArray addObject:timer];
+    
+    timer = [YHTimer startTimer:2 runloopMode:YHTimerCommonMode timeOutFireAction:^{
         NSLog(@"2");
     }];
-    [self.array addObject:timerId];
+    [self.timerArray addObject:timer];
     
-    timerId = [[YHTimerManager shareManager] startTimer:3 runloopMode:YHTimerDefaultMode timeOutFireAction:^{
-        NSLog(@"3");
-    }];
-    [self.array addObject:timerId];
-    
-    timerId = [[YHTimerManager shareManager] startTimer:3 runloopMode:YHTimerDefaultMode timeOutFireAction:^{
-        NSLog(@"3-1");
-    }];
-    [self.array addObject:timerId];
-    
-    timerId = [[YHTimerManager shareManager] startTimer:4 runloopMode:YHTimerDefaultMode timeOutFireAction:^{
-        NSLog(@"4");
-    }];
-    [self.array addObject:timerId];
-    
-    timerId = [[YHTimerManager shareManager] startTimer:4 runloopMode:YHTimerCommonMode timeOutFireAction:^{
-        NSLog(@"4-1");
-    }];
-    [self.array addObject:timerId];
 }
 
 -(void)dealloc{
-    for (NSString* timerId in self.array) {
-        [[YHTimerManager shareManager]stopTimer:timerId];
+    
+    for (YHTimer *timer in self.timerArray) {
+        [timer stop];
     }
 }
 
