@@ -77,7 +77,7 @@
 
 -(NSArray *)dataArray{
     if (!_dataArray) {
-        _dataArray = @[@[@"屏幕外截图",@"YHOutScreenShotController"],@[@"测试RunLoop",@"YHRunLoopTestViewController"]];
+        _dataArray = @[@[@"屏幕外截图",@"YHOutScreenShotController"],@[@"测试RunLoop",@"YHRunLoopTestViewController"],@[@"动画暂停与结束",@"YHAnmiationTimeViewController"]];
     }
     return _dataArray;
 }

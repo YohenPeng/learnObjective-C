@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3D93047B282B43FC4F3495D9 /* libPods-learnObjective-C.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E20BBEA862C14C4C792771ED /* libPods-learnObjective-C.a */; };
 		9E5D9210207058C900B3F97F /* YHOutScreenShotController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5D920F207058C900B3F97F /* YHOutScreenShotController.m */; };
+		E51B0ED22076048200CD456D /* YHAnmiationTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E51B0ED12076048200CD456D /* YHAnmiationTimeViewController.m */; };
 		E52FED3120525BC600734A99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E52FED3020525BC600734A99 /* AppDelegate.m */; };
 		E52FED3720525BC600734A99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E52FED3520525BC600734A99 /* Main.storyboard */; };
 		E52FED3920525BC800734A99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E52FED3820525BC800734A99 /* Assets.xcassets */; };
@@ -31,6 +32,8 @@
 		9E5D920E207058C900B3F97F /* YHOutScreenShotController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHOutScreenShotController.h; sourceTree = "<group>"; };
 		9E5D920F207058C900B3F97F /* YHOutScreenShotController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHOutScreenShotController.m; sourceTree = "<group>"; };
 		E20BBEA862C14C4C792771ED /* libPods-learnObjective-C.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-learnObjective-C.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E51B0ED02076048200CD456D /* YHAnmiationTimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHAnmiationTimeViewController.h; sourceTree = "<group>"; };
+		E51B0ED12076048200CD456D /* YHAnmiationTimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHAnmiationTimeViewController.m; sourceTree = "<group>"; };
 		E52FED2C20525BC600734A99 /* learnObjective-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "learnObjective-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E52FED2F20525BC600734A99 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E52FED3020525BC600734A99 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -135,6 +138,8 @@
 				E56B8133206E675A0034C691 /* YHRunLoopTestViewController.m */,
 				9E5D920E207058C900B3F97F /* YHOutScreenShotController.h */,
 				9E5D920F207058C900B3F97F /* YHOutScreenShotController.m */,
+				E51B0ED02076048200CD456D /* YHAnmiationTimeViewController.h */,
+				E51B0ED12076048200CD456D /* YHAnmiationTimeViewController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -284,6 +289,7 @@
 				E52FED3120525BC600734A99 /* AppDelegate.m in Sources */,
 				E56B8134206E675A0034C691 /* YHRunLoopTestViewController.m in Sources */,
 				E52FED5520525F6800734A99 /* YHView.m in Sources */,
+				E51B0ED22076048200CD456D /* YHAnmiationTimeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
