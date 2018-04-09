@@ -9,7 +9,7 @@
 #import "YHAnmiationTimeViewController.h"
 #import "Masonry.h"
 
-@interface YHAnmiationTimeViewController ()
+@interface YHAnmiationTimeViewController ()<CAAnimationDelegate>
 @property(nonatomic,strong)CALayer *animationView;
 @end
 
@@ -26,13 +26,14 @@
     
     CABasicAnimation *baseAnimation = [CABasicAnimation animationWithKeyPath:@"position.x"];
     baseAnimation.fillMode = kCAFillModeBoth;
-    baseAnimation.removedOnCompletion = NO;
+    baseAnimation.removedOnCompletion = YES;
     baseAnimation.duration = 10;
     baseAnimation.fromValue = @(0);
+    baseAnimation.delegate = self;
     baseAnimation.toValue = @(CGRectGetMaxX(self.view.bounds));
+    [baseAnimation setValue:self.animationView forKey:@"handleView"];
     [self.animationView addAnimation:baseAnimation forKey:@"baseAnimation"];
-    self.animationView.speed = 0;
-    
+//    self.animationView.speed = 0;
     
     UIButton *startBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [startBtn setTitle:@"继续" forState:UIControlStateNormal];
@@ -69,6 +70,18 @@
     }];
     [sliler addTarget:self action:@selector(sliderAction:) forControlEvents:UIControlEventValueChanged];
     
+}
+
+-(void)animationDidStop:(CABasicAnimation *)anim finished:(BOOL)flag{
+    
+    [CATransaction begin];
+    [CATransaction setDisableActions:YES];
+    CALayer *layer = [anim valueForKey:@"handleView"];
+    CGPoint point = layer.position;
+    point.x = [anim.toValue floatValue];
+    layer.position = point;
+
+    [CATransaction commit];
 }
 
 -(void)sliderAction:(UISlider *)slider{
@@ -119,6 +132,7 @@
         _animationView = [CALayer layer];
         _animationView.backgroundColor = [UIColor yellowColor].CGColor;
         _animationView.frame = CGRectMake(0, 300, 50, 50);
+        _animationView.cornerRadius = 10;
     }
     return _animationView;
 }
