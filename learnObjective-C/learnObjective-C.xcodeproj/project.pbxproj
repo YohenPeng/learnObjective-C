@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3D93047B282B43FC4F3495D9 /* libPods-learnObjective-C.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E20BBEA862C14C4C792771ED /* libPods-learnObjective-C.a */; };
 		9E5D9210207058C900B3F97F /* YHOutScreenShotController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5D920F207058C900B3F97F /* YHOutScreenShotController.m */; };
+		9EEF7C6A209858F100818C08 /* YHTestYYLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EEF7C69209858F100818C08 /* YHTestYYLabelViewController.m */; };
+		9EEF7C6D209863E900818C08 /* YHTestUILabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EEF7C6C209863E900818C08 /* YHTestUILabelViewController.m */; };
 		E51B0ED22076048200CD456D /* YHAnmiationTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E51B0ED12076048200CD456D /* YHAnmiationTimeViewController.m */; };
 		E52FED3120525BC600734A99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E52FED3020525BC600734A99 /* AppDelegate.m */; };
 		E52FED3720525BC600734A99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E52FED3520525BC600734A99 /* Main.storyboard */; };
@@ -31,6 +33,10 @@
 		76FE3E9FAEA59AE1CDC1EF8E /* Pods-learnObjective-C.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-learnObjective-C.release.xcconfig"; path = "Pods/Target Support Files/Pods-learnObjective-C/Pods-learnObjective-C.release.xcconfig"; sourceTree = "<group>"; };
 		9E5D920E207058C900B3F97F /* YHOutScreenShotController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHOutScreenShotController.h; sourceTree = "<group>"; };
 		9E5D920F207058C900B3F97F /* YHOutScreenShotController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHOutScreenShotController.m; sourceTree = "<group>"; };
+		9EEF7C68209858F100818C08 /* YHTestYYLabelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHTestYYLabelViewController.h; sourceTree = "<group>"; };
+		9EEF7C69209858F100818C08 /* YHTestYYLabelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHTestYYLabelViewController.m; sourceTree = "<group>"; };
+		9EEF7C6B209863E900818C08 /* YHTestUILabelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHTestUILabelViewController.h; sourceTree = "<group>"; };
+		9EEF7C6C209863E900818C08 /* YHTestUILabelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHTestUILabelViewController.m; sourceTree = "<group>"; };
 		E20BBEA862C14C4C792771ED /* libPods-learnObjective-C.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-learnObjective-C.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E51B0ED02076048200CD456D /* YHAnmiationTimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHAnmiationTimeViewController.h; sourceTree = "<group>"; };
 		E51B0ED12076048200CD456D /* YHAnmiationTimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHAnmiationTimeViewController.m; sourceTree = "<group>"; };
@@ -140,6 +146,10 @@
 				9E5D920F207058C900B3F97F /* YHOutScreenShotController.m */,
 				E51B0ED02076048200CD456D /* YHAnmiationTimeViewController.h */,
 				E51B0ED12076048200CD456D /* YHAnmiationTimeViewController.m */,
+				9EEF7C68209858F100818C08 /* YHTestYYLabelViewController.h */,
+				9EEF7C69209858F100818C08 /* YHTestYYLabelViewController.m */,
+				9EEF7C6B209863E900818C08 /* YHTestUILabelViewController.h */,
+				9EEF7C6C209863E900818C08 /* YHTestUILabelViewController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -196,6 +206,8 @@
 				E52FED2820525BC600734A99 /* Sources */,
 				E52FED2920525BC600734A99 /* Frameworks */,
 				E52FED2A20525BC600734A99 /* Resources */,
+				42FF0263FDC3C6C2F52EDC6F /* [CP] Embed Pods Frameworks */,
+				C88CC8A4B895772DDEF178B8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -252,6 +264,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		42FF0263FDC3C6C2F52EDC6F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-learnObjective-C/Pods-learnObjective-C-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C88CC8A4B895772DDEF178B8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-learnObjective-C/Pods-learnObjective-C-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D2F87D2A9F18D2AE5818799F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -279,6 +321,7 @@
 			files = (
 				E5BD3D28206E1B340035B2E8 /* YHMainRLTaskManager.m in Sources */,
 				E56B812E206E246F0034C691 /* YHTimer.m in Sources */,
+				9EEF7C6D209863E900818C08 /* YHTestUILabelViewController.m in Sources */,
 				E52FED4B20525D3000734A99 /* YHNavViewController.m in Sources */,
 				E52FED5B20525FC800734A99 /* YHBaseTableViewModel.m in Sources */,
 				E52FED5820525F8B00734A99 /* YHTableView.m in Sources */,
@@ -287,6 +330,7 @@
 				E52FED4820525CB100734A99 /* YHMainViewController.m in Sources */,
 				E52FED4F20525D5A00734A99 /* YHBaseViewController.m in Sources */,
 				E52FED3120525BC600734A99 /* AppDelegate.m in Sources */,
+				9EEF7C6A209858F100818C08 /* YHTestYYLabelViewController.m in Sources */,
 				E56B8134206E675A0034C691 /* YHRunLoopTestViewController.m in Sources */,
 				E52FED5520525F6800734A99 /* YHView.m in Sources */,
 				E51B0ED22076048200CD456D /* YHAnmiationTimeViewController.m in Sources */,
@@ -431,7 +475,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XQH2UMMQLA;
 				INFOPLIST_FILE = "learnObjective-C/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -448,7 +494,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XQH2UMMQLA;
 				INFOPLIST_FILE = "learnObjective-C/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -11,6 +11,7 @@
 
 typedef NSInteger(^YHNumberOfRowsInSection)(UITableView *tableView,NSInteger section);
 typedef UITableViewCell *(^YHCellForRowAtIndexPath)(UITableView *tableView,NSIndexPath* indexPath);
+typedef CGFloat (^YHHeightForRowAtIndexPath)(UITableView *tableView,NSIndexPath* indexPath);
 typedef void(^YHDidSelectRowAtIndexPath)(UITableView *tableView,NSIndexPath* indexPath);
 
 @interface YHBaseTableViewModel : NSObject
@@ -22,6 +23,8 @@ typedef void(^YHDidSelectRowAtIndexPath)(UITableView *tableView,NSIndexPath* ind
 -(void)setupCellForRowAtIndexPath:(YHCellForRowAtIndexPath)block;
 
 -(void)setupDidSelectRowAtIndexPath:(YHDidSelectRowAtIndexPath)block;
+
+-(void)setupHeightForRowAtIndexPath:(YHHeightForRowAtIndexPath)block;
 
 -(void)reload;
 
