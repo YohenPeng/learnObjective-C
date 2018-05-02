@@ -13,6 +13,7 @@
 @property(copy,nonatomic)YHNumberOfRowsInSection numOfRowsInSectionBlock;
 @property(copy,nonatomic)YHCellForRowAtIndexPath cellForRowAtIndexPathBlock;
 @property(copy,nonatomic)YHDidSelectRowAtIndexPath didSelectRowAtIndexPathBlock;
+@property(copy,nonatomic)YHHeightForRowAtIndexPath heightForRowAtIndexPathBlcok;
 @end
 
 @implementation YHBaseTableViewModel
@@ -39,6 +40,10 @@
     self.didSelectRowAtIndexPathBlock = block;
 }
 
+-(void)setupHeightForRowAtIndexPath:(YHHeightForRowAtIndexPath)block{
+    self.heightForRowAtIndexPathBlcok = block;
+}
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (self.numOfRowsInSectionBlock) {
         return self.numOfRowsInSectionBlock(tableView,section);
@@ -57,6 +62,13 @@
     if (self.didSelectRowAtIndexPathBlock) {
         self.didSelectRowAtIndexPathBlock(tableView, indexPath);
     }
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (self.heightForRowAtIndexPathBlcok) {
+        self.heightForRowAtIndexPathBlcok(tableView,indexPath);
+    }
+    return 44;
 }
 
 -(void)reload{
