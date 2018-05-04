@@ -66,7 +66,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (self.heightForRowAtIndexPathBlcok) {
-        self.heightForRowAtIndexPathBlcok(tableView,indexPath);
+       return self.heightForRowAtIndexPathBlcok(tableView,indexPath);
     }
     return 44;
 }

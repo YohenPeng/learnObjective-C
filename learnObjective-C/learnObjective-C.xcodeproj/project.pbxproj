@@ -206,8 +206,6 @@
 				E52FED2820525BC600734A99 /* Sources */,
 				E52FED2920525BC600734A99 /* Frameworks */,
 				E52FED2A20525BC600734A99 /* Resources */,
-				42FF0263FDC3C6C2F52EDC6F /* [CP] Embed Pods Frameworks */,
-				C88CC8A4B895772DDEF178B8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,36 +262,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		42FF0263FDC3C6C2F52EDC6F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-learnObjective-C/Pods-learnObjective-C-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C88CC8A4B895772DDEF178B8 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-learnObjective-C/Pods-learnObjective-C-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		D2F87D2A9F18D2AE5818799F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -475,14 +443,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XQH2UMMQLA;
+				DEVELOPMENT_TEAM = GV9235UPBK;
 				INFOPLIST_FILE = "learnObjective-C/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "peng-yihan.learnObjective-C";
+				PRODUCT_BUNDLE_IDENTIFIER = "pengyihan.learnObjective-C";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -494,14 +462,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XQH2UMMQLA;
+				DEVELOPMENT_TEAM = GV9235UPBK;
 				INFOPLIST_FILE = "learnObjective-C/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "peng-yihan.learnObjective-C";
+				PRODUCT_BUNDLE_IDENTIFIER = "pengyihan.learnObjective-C";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

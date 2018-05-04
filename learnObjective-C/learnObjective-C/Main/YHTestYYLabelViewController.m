@@ -10,6 +10,8 @@
 #import <YYKit.h>
 #import "YHTableView.h"
 #import "YHBaseTableViewModel.h"
+#import <NSAttributedString+YYText.h>
+
 
 static NSString* kCellId = @"kHYTestYYLabelCellId";
 
@@ -70,6 +72,7 @@ static NSString* kCellId = @"kHYTestYYLabelCellId";
 
 -(void)setupContentView{
     self.yyLabel = [YYLabel new];
+    self.yyLabel.displaysAsynchronously = YES;
     [self.contentView addSubview:self.yyLabel];
 }
 
@@ -97,11 +100,24 @@ static NSString* kCellId = @"kHYTestYYLabelCellId";
     [super viewDidLoad];
     self.dataArray = [[NSMutableArray alloc] init];
     // Do any additional setup after loading the view.
-    for (int i = 0; i < 100; i++) {
+    for (int i = 0; i < 1000; i++) {
         HYCellModel *model = [HYCellModel new];
-        NSMutableAttributedString *mutableString = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"测试性能性能性能性能性能 index:%d",i]];
+        NSMutableAttributedString *mutableString = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"性能测试性能测试性能测试性能测试性能测试性能测试性能性能测试性能测试性能测试性能测试性能测试性能测试性能 index:%d",i]];
         [mutableString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:16] range:[mutableString.string rangeOfString:mutableString.string]];
         [mutableString addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:[mutableString.string rangeOfString:mutableString.string]];
+        
+        
+//        NSTextAttachment *attach = [NSTextAttachment new];
+//        attach.image = [UIImage imageNamed:@"qq"];
+//        attach.bounds = CGRectMake(0, 0, 20, 20);
+//
+//        for (int j = 0; j < i % 10; j++) {
+//            NSMutableAttributedString *attachImage = [NSMutableAttributedString attachmentStringWithContent:[UIImage imageNamed:@"qq"] contentMode:UIViewContentModeScaleToFill attachmentSize:CGSizeMake(20, 20) alignToFont:[UIFont systemFontOfSize:16] alignment:YYTextVerticalAlignmentCenter];
+//            [mutableString appendAttributedString:attachImage];
+//        }
+        
+        [mutableString appendAttributedString:[[NSAttributedString alloc] initWithString:@"test"]];
+        
         model.attributedString = mutableString;
         [self.dataArray addObject:model];
     }
