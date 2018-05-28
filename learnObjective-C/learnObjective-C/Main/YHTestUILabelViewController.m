@@ -98,15 +98,16 @@ static NSString* kCellId = @"kHYTestUILabelCellId";
         HYUILabelCellModel *model = [HYUILabelCellModel new];
         NSMutableAttributedString *mutableString = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"性能测试性能测试性能测试性能测试性能测试性能测试性能性能测试性能测试性能测试性能测试性能测试性能测试性能 index:%d",i]];
  
-//        NSTextAttachment *attach = [NSTextAttachment new];
-//        attach.image = [UIImage imageNamed:@"qq"];
-//        attach.bounds = CGRectMake(0, 0, 20, 20);
-//
-//        for (int j = 0; j < i % 10; j++) {
-//            [mutableString appendAttributedString:[NSAttributedString attributedStringWithAttachment:attach]];
-//        }
+        NSTextAttachment *attach = [NSTextAttachment new];
+        attach.image = [UIImage imageNamed:@"qq"];
+        attach.bounds = CGRectMake(0, 0, 20, 20);
+
+        for (int j = 0; j < i % 10; j++) {
+            [mutableString appendAttributedString:[NSAttributedString attributedStringWithAttachment:attach]];
+        }
         
         [mutableString appendAttributedString:[[NSAttributedString alloc] initWithString:@"test"]];
+        
         [mutableString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:16] range:[mutableString.string rangeOfString:mutableString.string]];
         [mutableString addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:[mutableString.string rangeOfString:mutableString.string]];
         model.attributedString = mutableString;

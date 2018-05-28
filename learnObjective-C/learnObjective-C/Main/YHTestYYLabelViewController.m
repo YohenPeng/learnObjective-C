@@ -107,14 +107,14 @@ static NSString* kCellId = @"kHYTestYYLabelCellId";
         [mutableString addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:[mutableString.string rangeOfString:mutableString.string]];
         
         
-//        NSTextAttachment *attach = [NSTextAttachment new];
-//        attach.image = [UIImage imageNamed:@"qq"];
-//        attach.bounds = CGRectMake(0, 0, 20, 20);
-//
-//        for (int j = 0; j < i % 10; j++) {
-//            NSMutableAttributedString *attachImage = [NSMutableAttributedString attachmentStringWithContent:[UIImage imageNamed:@"qq"] contentMode:UIViewContentModeScaleToFill attachmentSize:CGSizeMake(20, 20) alignToFont:[UIFont systemFontOfSize:16] alignment:YYTextVerticalAlignmentCenter];
-//            [mutableString appendAttributedString:attachImage];
-//        }
+        NSTextAttachment *attach = [NSTextAttachment new];
+        attach.image = [UIImage imageNamed:@"qq"];
+        attach.bounds = CGRectMake(0, 0, 20, 20);
+
+        for (int j = 0; j < i % 10; j++) {
+            NSMutableAttributedString *attachImage = [NSMutableAttributedString attachmentStringWithContent:[UIImage imageNamed:@"qq"] contentMode:UIViewContentModeScaleToFill attachmentSize:CGSizeMake(20, 20) alignToFont:[UIFont systemFontOfSize:16] alignment:YYTextVerticalAlignmentCenter];
+            [mutableString appendAttributedString:attachImage];
+        }
         
         [mutableString appendAttributedString:[[NSAttributedString alloc] initWithString:@"test"]];
         

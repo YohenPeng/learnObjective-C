@@ -13,6 +13,7 @@
 @interface YHRunLoopTestViewController ()
 @property(nonatomic,strong)NSMutableArray *array;
 @property(strong,nonatomic)NSMutableArray *timerArray;
+@property(strong,nonatomic)UIImageView *imageView;
 @end
 
 @implementation YHRunLoopTestViewController
@@ -21,27 +22,43 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+//    UIImage *resizeImage = [[UIImage imageNamed:@"test"] ]
+    self.imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"test"]];
+    self.imageView.contentMode = UIViewContentModeTop;
+    self.imageView.layer.anchorPoint = CGPointMake(0.5, 0);
+    self.imageView.frame = CGRectMake(100, 100, 100,0);
+    [self.view addSubview:self.imageView];
     
-    self.timerArray = [NSMutableArray new];
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"bounds.size.height"];
+    animation.toValue = @(200);
+    animation.duration = 10;
+    animation.fillMode = kCAFillModeForwards;
+    animation.removedOnCompletion = NO;
+    [self.imageView.layer addAnimation:animation forKey:@"kLyrcisAnimation"];
     
-    YHTimer *timer;
     
-    timer = [YHTimer startTimer:1 runloopMode:YHTimerDefaultMode timeOutFireAction:^{
-        NSLog(@"1");
-    }];
     
-    [self.timerArray addObject:timer];
-    
-    timer = [YHTimer startTimer:1 runloopMode:YHTimerCommonMode timeOutFireAction:^{
-        NSLog(@"1");
-    }];
-    
-    [self.timerArray addObject:timer];
-    
-    timer = [YHTimer startTimer:2 runloopMode:YHTimerCommonMode timeOutFireAction:^{
-        NSLog(@"2");
-    }];
-    [self.timerArray addObject:timer];
+//
+//    self.timerArray = [NSMutableArray new];
+//
+//    YHTimer *timer;
+//
+//    timer = [YHTimer startTimer:1 runloopMode:YHTimerDefaultMode timeOutFireAction:^{
+//        NSLog(@"1");
+//    }];
+//
+//    [self.timerArray addObject:timer];
+//
+//    timer = [YHTimer startTimer:1 runloopMode:YHTimerCommonMode timeOutFireAction:^{
+//        NSLog(@"1");
+//    }];
+//
+//    [self.timerArray addObject:timer];
+//
+//    timer = [YHTimer startTimer:2 runloopMode:YHTimerCommonMode timeOutFireAction:^{
+//        NSLog(@"2");
+//    }];
+//    [self.timerArray addObject:timer];
     
 }
 
