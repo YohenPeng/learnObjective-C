@@ -25,6 +25,7 @@
 		E52FED5B20525FC800734A99 /* YHBaseTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E52FED5A20525FC800734A99 /* YHBaseTableViewModel.m */; };
 		E56B812E206E246F0034C691 /* YHTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = E56B812D206E246F0034C691 /* YHTimer.m */; };
 		E56B8134206E675A0034C691 /* YHRunLoopTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56B8133206E675A0034C691 /* YHRunLoopTestViewController.m */; };
+		E598F05420BBE7B1000755F9 /* YHTestStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E598F05320BBE7B1000755F9 /* YHTestStackViewController.m */; };
 		E5BD3D28206E1B340035B2E8 /* YHMainRLTaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BD3D27206E1B330035B2E8 /* YHMainRLTaskManager.m */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,8 @@
 		E56B812D206E246F0034C691 /* YHTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHTimer.m; sourceTree = "<group>"; };
 		E56B8132206E675A0034C691 /* YHRunLoopTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHRunLoopTestViewController.h; sourceTree = "<group>"; };
 		E56B8133206E675A0034C691 /* YHRunLoopTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHRunLoopTestViewController.m; sourceTree = "<group>"; };
+		E598F05220BBE7B1000755F9 /* YHTestStackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHTestStackViewController.h; sourceTree = "<group>"; };
+		E598F05320BBE7B1000755F9 /* YHTestStackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHTestStackViewController.m; sourceTree = "<group>"; };
 		E5BD3D26206E1B330035B2E8 /* YHMainRLTaskManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHMainRLTaskManager.h; sourceTree = "<group>"; };
 		E5BD3D27206E1B330035B2E8 /* YHMainRLTaskManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHMainRLTaskManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,6 +153,8 @@
 				9EEF7C69209858F100818C08 /* YHTestYYLabelViewController.m */,
 				9EEF7C6B209863E900818C08 /* YHTestUILabelViewController.h */,
 				9EEF7C6C209863E900818C08 /* YHTestUILabelViewController.m */,
+				E598F05220BBE7B1000755F9 /* YHTestStackViewController.h */,
+				E598F05320BBE7B1000755F9 /* YHTestStackViewController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -299,6 +304,7 @@
 				E52FED4F20525D5A00734A99 /* YHBaseViewController.m in Sources */,
 				E52FED3120525BC600734A99 /* AppDelegate.m in Sources */,
 				9EEF7C6A209858F100818C08 /* YHTestYYLabelViewController.m in Sources */,
+				E598F05420BBE7B1000755F9 /* YHTestStackViewController.m in Sources */,
 				E56B8134206E675A0034C691 /* YHRunLoopTestViewController.m in Sources */,
 				E52FED5520525F6800734A99 /* YHView.m in Sources */,
 				E51B0ED22076048200CD456D /* YHAnmiationTimeViewController.m in Sources */,
