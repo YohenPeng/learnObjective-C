@@ -63,7 +63,7 @@
     [self.stackView addArrangedSubview:itemView3];
     
     if (@available(iOS 11.0, *)) {
-        [self.stackView setCustomSpacing:20 afterView:itemView2];
+        [self.stackView setCustomSpacing:5 afterView:itemView2];
     } else {
         // Fallback on earlier versions
     }

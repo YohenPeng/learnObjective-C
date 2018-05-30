@@ -11,6 +11,8 @@
 		9E5D9210207058C900B3F97F /* YHOutScreenShotController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5D920F207058C900B3F97F /* YHOutScreenShotController.m */; };
 		9EEF7C6A209858F100818C08 /* YHTestYYLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EEF7C69209858F100818C08 /* YHTestYYLabelViewController.m */; };
 		9EEF7C6D209863E900818C08 /* YHTestUILabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EEF7C6C209863E900818C08 /* YHTestUILabelViewController.m */; };
+		E50FC52820BE435A003A2FEC /* HYCountDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E50FC52720BE435A003A2FEC /* HYCountDownViewController.m */; };
+		E50FC52B20BE43C8003A2FEC /* HYCountDownBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = E50FC52A20BE43C8003A2FEC /* HYCountDownBtn.m */; };
 		E51B0ED22076048200CD456D /* YHAnmiationTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E51B0ED12076048200CD456D /* YHAnmiationTimeViewController.m */; };
 		E52FED3120525BC600734A99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E52FED3020525BC600734A99 /* AppDelegate.m */; };
 		E52FED3720525BC600734A99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E52FED3520525BC600734A99 /* Main.storyboard */; };
@@ -39,6 +41,10 @@
 		9EEF7C6B209863E900818C08 /* YHTestUILabelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHTestUILabelViewController.h; sourceTree = "<group>"; };
 		9EEF7C6C209863E900818C08 /* YHTestUILabelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHTestUILabelViewController.m; sourceTree = "<group>"; };
 		E20BBEA862C14C4C792771ED /* libPods-learnObjective-C.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-learnObjective-C.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E50FC52620BE435A003A2FEC /* HYCountDownViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYCountDownViewController.h; sourceTree = "<group>"; };
+		E50FC52720BE435A003A2FEC /* HYCountDownViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYCountDownViewController.m; sourceTree = "<group>"; };
+		E50FC52920BE43C8003A2FEC /* HYCountDownBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYCountDownBtn.h; sourceTree = "<group>"; };
+		E50FC52A20BE43C8003A2FEC /* HYCountDownBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYCountDownBtn.m; sourceTree = "<group>"; };
 		E51B0ED02076048200CD456D /* YHAnmiationTimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHAnmiationTimeViewController.h; sourceTree = "<group>"; };
 		E51B0ED12076048200CD456D /* YHAnmiationTimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHAnmiationTimeViewController.m; sourceTree = "<group>"; };
 		E52FED2C20525BC600734A99 /* learnObjective-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "learnObjective-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +149,8 @@
 				E52FED4720525CB100734A99 /* YHMainViewController.m */,
 				E56B812C206E246F0034C691 /* YHTimer.h */,
 				E56B812D206E246F0034C691 /* YHTimer.m */,
+				E50FC52920BE43C8003A2FEC /* HYCountDownBtn.h */,
+				E50FC52A20BE43C8003A2FEC /* HYCountDownBtn.m */,
 				E56B8132206E675A0034C691 /* YHRunLoopTestViewController.h */,
 				E56B8133206E675A0034C691 /* YHRunLoopTestViewController.m */,
 				9E5D920E207058C900B3F97F /* YHOutScreenShotController.h */,
@@ -155,6 +163,8 @@
 				9EEF7C6C209863E900818C08 /* YHTestUILabelViewController.m */,
 				E598F05220BBE7B1000755F9 /* YHTestStackViewController.h */,
 				E598F05320BBE7B1000755F9 /* YHTestStackViewController.m */,
+				E50FC52620BE435A003A2FEC /* HYCountDownViewController.h */,
+				E50FC52720BE435A003A2FEC /* HYCountDownViewController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -297,6 +307,7 @@
 				9EEF7C6D209863E900818C08 /* YHTestUILabelViewController.m in Sources */,
 				E52FED4B20525D3000734A99 /* YHNavViewController.m in Sources */,
 				E52FED5B20525FC800734A99 /* YHBaseTableViewModel.m in Sources */,
+				E50FC52B20BE43C8003A2FEC /* HYCountDownBtn.m in Sources */,
 				E52FED5820525F8B00734A99 /* YHTableView.m in Sources */,
 				9E5D9210207058C900B3F97F /* YHOutScreenShotController.m in Sources */,
 				E52FED3F20525BC800734A99 /* main.m in Sources */,
@@ -304,6 +315,7 @@
 				E52FED4F20525D5A00734A99 /* YHBaseViewController.m in Sources */,
 				E52FED3120525BC600734A99 /* AppDelegate.m in Sources */,
 				9EEF7C6A209858F100818C08 /* YHTestYYLabelViewController.m in Sources */,
+				E50FC52820BE435A003A2FEC /* HYCountDownViewController.m in Sources */,
 				E598F05420BBE7B1000755F9 /* YHTestStackViewController.m in Sources */,
 				E56B8134206E675A0034C691 /* YHRunLoopTestViewController.m in Sources */,
 				E52FED5520525F6800734A99 /* YHView.m in Sources */,

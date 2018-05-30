@@ -77,7 +77,7 @@
 
 -(NSArray *)dataArray{
     if (!_dataArray) {
-        _dataArray = @[@[@"屏幕外截图",@"YHOutScreenShotController"],@[@"测试RunLoop",@"YHRunLoopTestViewController"],@[@"动画暂停与结束",@"YHAnmiationTimeViewController"],@[@"测试YYLabel",@"YHTestYYLabelViewController"],@[@"测试UILabel",@"YHTestUILabelViewController"],@[@"测试stackView",@"YHTestStackViewController"]];
+        _dataArray = @[@[@"屏幕外截图",@"YHOutScreenShotController"],@[@"测试RunLoop",@"YHRunLoopTestViewController"],@[@"动画暂停与结束",@"YHAnmiationTimeViewController"],@[@"测试YYLabel",@"YHTestYYLabelViewController"],@[@"测试UILabel",@"YHTestUILabelViewController"],@[@"测试stackView",@"YHTestStackViewController"],@[@"CountDown测试",@"HYCountDownViewController"]];
     }
     return _dataArray;
 }
