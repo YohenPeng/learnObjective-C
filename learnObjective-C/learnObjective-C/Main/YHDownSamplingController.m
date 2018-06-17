@@ -52,15 +52,16 @@
 -(UIImage*)downsample:(NSURL *)imageUrl pointSize:(CGSize)size scale:(CGFloat)scale{
     CFDictionaryRef readOptions = (__bridge CFDictionaryRef) @{(id) kCGImageSourceShouldCache : @NO};
     CGImageSourceRef src = CGImageSourceCreateWithURL((__bridge CFURLRef) imageUrl, readOptions);
+    CFRelease(readOptions);
     // Create thumbnail options
     
     CGFloat pixels = MAX(size.width, size.height) * scale;
     CFDictionaryRef options = (__bridge CFDictionaryRef) @{
+                                                           (id) kCGImageSourceThumbnailMaxPixelSize : @(100),
                                                            (id) kCGImageSourceShouldAllowFloat : @YES,
                                                            (id) kCGImageSourceCreateThumbnailWithTransform : @YES,
                                                            (id) kCGImageSourceShouldCacheImmediately: @YES,
                                                            (id) kCGImageSourceCreateThumbnailFromImageAlways : @YES,
-                                                           (id) kCGImageSourceThumbnailMaxPixelSize : @(100)
                                                            };
     // Generate the thumbnail
     CGImageRef imageRef = CGImageSourceCreateImageAtIndex(src, 0, options);

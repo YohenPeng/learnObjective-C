@@ -14,7 +14,6 @@
 		E50FC52820BE435A003A2FEC /* HYCountDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E50FC52720BE435A003A2FEC /* HYCountDownViewController.m */; };
 		E50FC52B20BE43C8003A2FEC /* HYCountDownBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = E50FC52A20BE43C8003A2FEC /* HYCountDownBtn.m */; };
 		E51B0ED22076048200CD456D /* YHAnmiationTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E51B0ED12076048200CD456D /* YHAnmiationTimeViewController.m */; };
-		E528E7A020D668C700965110 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = E528E79F20D668C700965110 /* test.png */; };
 		E52FED3120525BC600734A99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E52FED3020525BC600734A99 /* AppDelegate.m */; };
 		E52FED3720525BC600734A99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E52FED3520525BC600734A99 /* Main.storyboard */; };
 		E52FED3920525BC800734A99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E52FED3820525BC800734A99 /* Assets.xcassets */; };
@@ -49,7 +48,6 @@
 		E50FC52A20BE43C8003A2FEC /* HYCountDownBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYCountDownBtn.m; sourceTree = "<group>"; };
 		E51B0ED02076048200CD456D /* YHAnmiationTimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHAnmiationTimeViewController.h; sourceTree = "<group>"; };
 		E51B0ED12076048200CD456D /* YHAnmiationTimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHAnmiationTimeViewController.m; sourceTree = "<group>"; };
-		E528E79F20D668C700965110 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 		E52FED2C20525BC600734A99 /* learnObjective-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "learnObjective-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E52FED2F20525BC600734A99 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E52FED3020525BC600734A99 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -172,7 +170,6 @@
 				E50FC52720BE435A003A2FEC /* HYCountDownViewController.m */,
 				E56A824A20D2064D00AFB07F /* YHDownSamplingController.h */,
 				E56A824B20D2064D00AFB07F /* YHDownSamplingController.m */,
-				E528E79F20D668C700965110 /* test.png */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -279,7 +276,6 @@
 				E52FED3C20525BC800734A99 /* LaunchScreen.storyboard in Resources */,
 				E52FED3920525BC800734A99 /* Assets.xcassets in Resources */,
 				E52FED3720525BC600734A99 /* Main.storyboard in Resources */,
-				E528E7A020D668C700965110 /* test.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
