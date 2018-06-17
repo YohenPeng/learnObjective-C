@@ -25,6 +25,8 @@
 		E52FED5520525F6800734A99 /* YHView.m in Sources */ = {isa = PBXBuildFile; fileRef = E52FED5420525F6800734A99 /* YHView.m */; };
 		E52FED5820525F8B00734A99 /* YHTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E52FED5720525F8B00734A99 /* YHTableView.m */; };
 		E52FED5B20525FC800734A99 /* YHBaseTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E52FED5A20525FC800734A99 /* YHBaseTableViewModel.m */; };
+		E56A824C20D2064D00AFB07F /* YHDownSamplingController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56A824B20D2064D00AFB07F /* YHDownSamplingController.m */; };
+		E56A825220D39DED00AFB07F /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = E56A825120D39DED00AFB07F /* test.png */; };
 		E56B812E206E246F0034C691 /* YHTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = E56B812D206E246F0034C691 /* YHTimer.m */; };
 		E56B8134206E675A0034C691 /* YHRunLoopTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56B8133206E675A0034C691 /* YHRunLoopTestViewController.m */; };
 		E598F05420BBE7B1000755F9 /* YHTestStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E598F05320BBE7B1000755F9 /* YHTestStackViewController.m */; };
@@ -67,6 +69,9 @@
 		E52FED5720525F8B00734A99 /* YHTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHTableView.m; sourceTree = "<group>"; };
 		E52FED5920525FC800734A99 /* YHBaseTableViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHBaseTableViewModel.h; sourceTree = "<group>"; };
 		E52FED5A20525FC800734A99 /* YHBaseTableViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHBaseTableViewModel.m; sourceTree = "<group>"; };
+		E56A824A20D2064D00AFB07F /* YHDownSamplingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHDownSamplingController.h; sourceTree = "<group>"; };
+		E56A824B20D2064D00AFB07F /* YHDownSamplingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHDownSamplingController.m; sourceTree = "<group>"; };
+		E56A825120D39DED00AFB07F /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 		E56B812C206E246F0034C691 /* YHTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHTimer.h; sourceTree = "<group>"; };
 		E56B812D206E246F0034C691 /* YHTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHTimer.m; sourceTree = "<group>"; };
 		E56B8132206E675A0034C691 /* YHRunLoopTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHRunLoopTestViewController.h; sourceTree = "<group>"; };
@@ -165,6 +170,9 @@
 				E598F05320BBE7B1000755F9 /* YHTestStackViewController.m */,
 				E50FC52620BE435A003A2FEC /* HYCountDownViewController.h */,
 				E50FC52720BE435A003A2FEC /* HYCountDownViewController.m */,
+				E56A824A20D2064D00AFB07F /* YHDownSamplingController.h */,
+				E56A824B20D2064D00AFB07F /* YHDownSamplingController.m */,
+				E56A825120D39DED00AFB07F /* test.png */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -271,6 +279,7 @@
 				E52FED3C20525BC800734A99 /* LaunchScreen.storyboard in Resources */,
 				E52FED3920525BC800734A99 /* Assets.xcassets in Resources */,
 				E52FED3720525BC600734A99 /* Main.storyboard in Resources */,
+				E56A825220D39DED00AFB07F /* test.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +327,7 @@
 				E50FC52820BE435A003A2FEC /* HYCountDownViewController.m in Sources */,
 				E598F05420BBE7B1000755F9 /* YHTestStackViewController.m in Sources */,
 				E56B8134206E675A0034C691 /* YHRunLoopTestViewController.m in Sources */,
+				E56A824C20D2064D00AFB07F /* YHDownSamplingController.m in Sources */,
 				E52FED5520525F6800734A99 /* YHView.m in Sources */,
 				E51B0ED22076048200CD456D /* YHAnmiationTimeViewController.m in Sources */,
 			);

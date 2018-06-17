@@ -29,8 +29,9 @@
     
     [self.view addSubview:self.countBtn2];
     self.countBtn2.frame = CGRectMake(10, 200, 80, 40);
-
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
