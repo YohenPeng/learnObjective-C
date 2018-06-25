@@ -14,6 +14,7 @@
 		E50FC52820BE435A003A2FEC /* HYCountDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E50FC52720BE435A003A2FEC /* HYCountDownViewController.m */; };
 		E50FC52B20BE43C8003A2FEC /* HYCountDownBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = E50FC52A20BE43C8003A2FEC /* HYCountDownBtn.m */; };
 		E51B0ED22076048200CD456D /* YHAnmiationTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E51B0ED12076048200CD456D /* YHAnmiationTimeViewController.m */; };
+		E528E7A320D6B5BE00965110 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = E528E7A220D6B5BE00965110 /* test.png */; };
 		E52FED3120525BC600734A99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E52FED3020525BC600734A99 /* AppDelegate.m */; };
 		E52FED3720525BC600734A99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E52FED3520525BC600734A99 /* Main.storyboard */; };
 		E52FED3920525BC800734A99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E52FED3820525BC800734A99 /* Assets.xcassets */; };
@@ -30,6 +31,10 @@
 		E56B8134206E675A0034C691 /* YHRunLoopTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56B8133206E675A0034C691 /* YHRunLoopTestViewController.m */; };
 		E598F05420BBE7B1000755F9 /* YHTestStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E598F05320BBE7B1000755F9 /* YHTestStackViewController.m */; };
 		E5BD3D28206E1B340035B2E8 /* YHMainRLTaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BD3D27206E1B330035B2E8 /* YHMainRLTaskManager.m */; };
+		E5BE847020E0CBCB002168DB /* YHNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BE846F20E0CBCB002168DB /* YHNewsViewController.m */; };
+		E5BE847420E0D1BF002168DB /* YHNewsTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BE847320E0D1BF002168DB /* YHNewsTableCell.m */; };
+		E5BE847720E0DA8D002168DB /* YHNewsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BE847620E0DA8D002168DB /* YHNewsViewModel.m */; };
+		E5BE847A20E0DAB6002168DB /* YHNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BE847920E0DAB6002168DB /* YHNewsModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +53,7 @@
 		E50FC52A20BE43C8003A2FEC /* HYCountDownBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYCountDownBtn.m; sourceTree = "<group>"; };
 		E51B0ED02076048200CD456D /* YHAnmiationTimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHAnmiationTimeViewController.h; sourceTree = "<group>"; };
 		E51B0ED12076048200CD456D /* YHAnmiationTimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHAnmiationTimeViewController.m; sourceTree = "<group>"; };
+		E528E7A220D6B5BE00965110 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 		E52FED2C20525BC600734A99 /* learnObjective-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "learnObjective-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E52FED2F20525BC600734A99 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E52FED3020525BC600734A99 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -78,6 +84,14 @@
 		E598F05320BBE7B1000755F9 /* YHTestStackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHTestStackViewController.m; sourceTree = "<group>"; };
 		E5BD3D26206E1B330035B2E8 /* YHMainRLTaskManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHMainRLTaskManager.h; sourceTree = "<group>"; };
 		E5BD3D27206E1B330035B2E8 /* YHMainRLTaskManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHMainRLTaskManager.m; sourceTree = "<group>"; };
+		E5BE846E20E0CBCB002168DB /* YHNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHNewsViewController.h; sourceTree = "<group>"; };
+		E5BE846F20E0CBCB002168DB /* YHNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHNewsViewController.m; sourceTree = "<group>"; };
+		E5BE847220E0D1BF002168DB /* YHNewsTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHNewsTableCell.h; sourceTree = "<group>"; };
+		E5BE847320E0D1BF002168DB /* YHNewsTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHNewsTableCell.m; sourceTree = "<group>"; };
+		E5BE847520E0DA8D002168DB /* YHNewsViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHNewsViewModel.h; sourceTree = "<group>"; };
+		E5BE847620E0DA8D002168DB /* YHNewsViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHNewsViewModel.m; sourceTree = "<group>"; };
+		E5BE847820E0DAB6002168DB /* YHNewsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHNewsModel.h; sourceTree = "<group>"; };
+		E5BE847920E0DAB6002168DB /* YHNewsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHNewsModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +184,8 @@
 				E50FC52720BE435A003A2FEC /* HYCountDownViewController.m */,
 				E56A824A20D2064D00AFB07F /* YHDownSamplingController.h */,
 				E56A824B20D2064D00AFB07F /* YHDownSamplingController.m */,
+				E5BE846920E0C930002168DB /* MVVMDemo */,
+				E528E7A220D6B5BE00965110 /* test.png */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -213,6 +229,53 @@
 				E52FED5A20525FC800734A99 /* YHBaseTableViewModel.m */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E5BE846920E0C930002168DB /* MVVMDemo */ = {
+			isa = PBXGroup;
+			children = (
+				E5BE846D20E0CAE6002168DB /* Model */,
+				E5BE846C20E0CAB3002168DB /* View */,
+				E5BE846B20E0CAA9002168DB /* ViewModel */,
+				E5BE846A20E0CA8F002168DB /* Controller */,
+			);
+			path = MVVMDemo;
+			sourceTree = "<group>";
+		};
+		E5BE846A20E0CA8F002168DB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E5BE846E20E0CBCB002168DB /* YHNewsViewController.h */,
+				E5BE846F20E0CBCB002168DB /* YHNewsViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E5BE846B20E0CAA9002168DB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E5BE847520E0DA8D002168DB /* YHNewsViewModel.h */,
+				E5BE847620E0DA8D002168DB /* YHNewsViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E5BE846C20E0CAB3002168DB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E5BE847220E0D1BF002168DB /* YHNewsTableCell.h */,
+				E5BE847320E0D1BF002168DB /* YHNewsTableCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E5BE846D20E0CAE6002168DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E5BE847820E0DAB6002168DB /* YHNewsModel.h */,
+				E5BE847920E0DAB6002168DB /* YHNewsModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +339,7 @@
 				E52FED3C20525BC800734A99 /* LaunchScreen.storyboard in Resources */,
 				E52FED3920525BC800734A99 /* Assets.xcassets in Resources */,
 				E52FED3720525BC600734A99 /* Main.storyboard in Resources */,
+				E528E7A320D6B5BE00965110 /* test.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,14 +379,18 @@
 				E50FC52B20BE43C8003A2FEC /* HYCountDownBtn.m in Sources */,
 				E52FED5820525F8B00734A99 /* YHTableView.m in Sources */,
 				9E5D9210207058C900B3F97F /* YHOutScreenShotController.m in Sources */,
+				E5BE847A20E0DAB6002168DB /* YHNewsModel.m in Sources */,
 				E52FED3F20525BC800734A99 /* main.m in Sources */,
 				E52FED4820525CB100734A99 /* YHMainViewController.m in Sources */,
 				E52FED4F20525D5A00734A99 /* YHBaseViewController.m in Sources */,
 				E52FED3120525BC600734A99 /* AppDelegate.m in Sources */,
+				E5BE847720E0DA8D002168DB /* YHNewsViewModel.m in Sources */,
 				9EEF7C6A209858F100818C08 /* YHTestYYLabelViewController.m in Sources */,
 				E50FC52820BE435A003A2FEC /* HYCountDownViewController.m in Sources */,
+				E5BE847020E0CBCB002168DB /* YHNewsViewController.m in Sources */,
 				E598F05420BBE7B1000755F9 /* YHTestStackViewController.m in Sources */,
 				E56B8134206E675A0034C691 /* YHRunLoopTestViewController.m in Sources */,
+				E5BE847420E0D1BF002168DB /* YHNewsTableCell.m in Sources */,
 				E56A824C20D2064D00AFB07F /* YHDownSamplingController.m in Sources */,
 				E52FED5520525F6800734A99 /* YHView.m in Sources */,
 				E51B0ED22076048200CD456D /* YHAnmiationTimeViewController.m in Sources */,
