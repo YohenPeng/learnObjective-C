@@ -9,11 +9,15 @@
 #import "YHNewsViewModel.h"
 #import "YHNewsModel.h"
 
+@interface YHNewsViewModel ()
+@property(strong,nonatomic,readwrite)NSArray *newsModelList;
+@end
+
 @implementation YHNewsViewModel
 
--(void)requestNews:(RequestNewsComplete)complete{
+-(void)requestNewsModelList:(YHErrorBlock)complete{
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        sleep(10);
+        sleep(1);
         
         YHNewsModel* model1 = [YHNewsModel initWithTitle:@"测试标题1" content:@"测试内容1"];
         YHNewsModel* model2 = [YHNewsModel initWithTitle:@"测试标题2" content:@"测试内容2"];
@@ -28,5 +32,16 @@
     });
 }
 
+-(void)deleteNewsModel:(YHNewsModel *)model complete:(YHErrorBlock)resultBlock{
+    
+    NSMutableArray *tempArray = [NSMutableArray arrayWithArray:self.newsModelList];
+    if (NSNotFound != [tempArray indexOfObject:model]) {
+        [tempArray removeObject:model];
+    }
+    self.newsModelList = [NSArray arrayWithArray:tempArray];
+    if (resultBlock) {
+        resultBlock(nil);
+    }
+}
 
 @end

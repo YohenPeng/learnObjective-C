@@ -8,13 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void(^RequestNewsComplete)(NSError *error);
+typedef void(^YHErrorBlock)(NSError *error);
+
 
 @class YHNewsModel;
 @interface YHNewsViewModel : NSObject
 
-@property(strong,nonatomic)NSArray<YHNewsModel *> *newsModelList;
+@property(strong,nonatomic,readonly)NSArray<YHNewsModel *> *newsModelList;
 
--(void)requestNews:(RequestNewsComplete)complete;
+-(void)requestNewsModelList:(YHErrorBlock)resultBlock;
+
+-(void)deleteNewsModel:(YHNewsModel *)model complete:(YHErrorBlock)resultBlock;
+
+
+
 
 @end

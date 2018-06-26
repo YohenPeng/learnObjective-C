@@ -10,5 +10,11 @@
 @class YHNewsModel;
 
 @interface YHNewsTableCell : UITableViewCell
+
++(NSString *)cellIdentifier;
+
++(void)registerToTableView:(UITableView *)tableView;
+
 -(void)configure:(YHNewsModel *)model;
+
 @end

@@ -11,12 +11,14 @@
 #import "YHNewsTableCell.h"
 #import "YHNewsViewModel.h"
 #import "YHNewsModel.h"
+#import "YHTableViewHelper.h"
+#import "YHNewsSection.h"
+#import "YHNewsCell.h"
 
-static NSString* const kNewsTableCellId = @"kNewsTableCellId";
-
-@interface YHNewsViewController () <UITableViewDelegate,UITableViewDataSource>
+@interface YHNewsViewController ()
 @property(strong,nonatomic)UITableView *newsTableView;
 @property(strong,nonatomic)YHNewsViewModel *newsViewModel;
+@property(strong,nonatomic)YHTableViewHelper *tableViewHelper;
 @end
 
 @implementation YHNewsViewController
@@ -29,9 +31,25 @@ static NSString* const kNewsTableCellId = @"kNewsTableCellId";
     [self setupSelf];
     [self setupContentView];
     
-    [self.newsViewModel requestNews:^(NSError *error) {
+    [self.newsViewModel requestNewsModelList:^(NSError *error) {
         if (nil == error) {
-            [self.newsTableView reloadData];
+            
+            YHNewsSection* section = [[YHNewsSection alloc]initWithCells:nil];
+            
+            for (YHNewsModel* model in self.newsViewModel.newsModelList) {
+                YHNewsCell *cell = [YHNewsCell new];
+                [cell setMyText:model.title];
+                [section addCell:cell];
+            }
+            
+            [self.tableViewHelper addSection:section];
+            [self.tableViewHelper refresh];
+            
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                YHNewsCell *cell = [YHNewsCell new];
+                [cell setMyText:@"测试测试"];
+                [section addCell:cell immediate:YES animation:UITableViewRowAnimationLeft];
+            });
         }
     }];
 }
@@ -43,25 +61,31 @@ static NSString* const kNewsTableCellId = @"kNewsTableCellId";
 }
 
 -(void)setupContentView{
-    [self setupNewsTableView];
+    [self newsTableView];
     
 }
 
--(void)setupNewsTableView{
-    self.newsTableView = ({
-        UITableView *tableView = [UITableView new];
-        tableView.dataSource = self;
-        tableView.delegate = self;
-        [tableView registerClass:[YHNewsTableCell class] forCellReuseIdentifier:kNewsTableCellId];
-        [self.view addSubview:tableView];
-        [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(self.view);
-        }];
-        tableView;
-    });
-
+-(UITableView *)newsTableView{
+    if (!_newsTableView) {
+        _newsTableView = ({
+            UITableView *tableView = [UITableView new];
+            [self.view addSubview:tableView];
+            [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.edges.equalTo(self.view);
+            }];
+            [YHNewsTableCell registerToTableView:_newsTableView];
+            tableView;
+        });
+    }
+    return _newsTableView;
 }
 
+-(YHTableViewHelper *)tableViewHelper{
+    if (!_tableViewHelper) {
+        _tableViewHelper = [[YHTableViewHelper alloc]initWithTableView:self.newsTableView sections:nil];
+    }
+    return _tableViewHelper;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -76,6 +100,10 @@ static NSString* const kNewsTableCellId = @"kNewsTableCellId";
     return _newsViewModel;
 }
 
+
+
+
+/*
 #pragma mark -- UITableViewDataSource
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.newsViewModel.newsModelList.count;
@@ -101,6 +129,20 @@ static NSString* const kNewsTableCellId = @"kNewsTableCellId";
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
+-(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return UITableViewCellEditingStyleDelete;
+}
+
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    YHNewsModel *model = [self.newsViewModel.newsModelList objectAtIndex:indexPath.row];
+    [self.newsViewModel deleteNewsModel:model complete:^(NSError *error) {
+        if (nil == error) {
+            [self.newsTableView reloadData];
+        }
+    }];
+}
+*/
 
 
 @end

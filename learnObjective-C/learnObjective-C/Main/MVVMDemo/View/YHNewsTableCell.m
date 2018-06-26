@@ -12,6 +12,13 @@
 
 @implementation YHNewsTableCell
 
++(void)registerToTableView:(UITableView *)tableView{
+    [tableView registerClass:[self class] forCellReuseIdentifier:[self cellIdentifier]];
+}
+
++(NSString *)cellIdentifier{
+    return NSStringFromClass([self class]);
+}
 
 -(void)configure:(YHNewsModel *)model{
     self.textLabel.text = [NSString stringWithFormat:@"%@:%@",model.title,model.content];
