@@ -8,6 +8,6 @@
 
 #import "YHTableSectionDataSource.h"
 
-@interface YHNewsSection : YHTableSectionDataSource
+@interface YHNewsSectionElement : YHTableSectionDataSource
 
 @end

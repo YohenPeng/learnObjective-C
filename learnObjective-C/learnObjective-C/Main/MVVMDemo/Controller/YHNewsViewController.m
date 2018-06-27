@@ -12,8 +12,8 @@
 #import "YHNewsViewModel.h"
 #import "YHNewsModel.h"
 #import "YHTableViewHelper.h"
-#import "YHNewsSection.h"
-#import "YHNewsCell.h"
+#import "YHNewsSectionElement.h"
+#import "YHNewsCellElement.h"
 
 @interface YHNewsViewController ()<YHTableViewHelperDelegate>
 @property(strong,nonatomic)UITableView *newsTableView;
@@ -34,24 +34,16 @@
     [self.newsViewModel requestNewsModelList:^(NSError *error) {
         if (nil == error) {
             
-            YHNewsSection* section = [[YHNewsSection alloc]initWithCells:nil];
+            YHNewsSectionElement* section = [[YHNewsSectionElement alloc]initWithCells:nil];
             
             for (YHNewsModel* model in self.newsViewModel.newsModelList) {
-                YHNewsCell *cell = [YHNewsCell new];
+                YHNewsCellElement *cell = [YHNewsCellElement new];
                 [cell setMyText:model.title];
                 [section addCell:cell];
             }
             
             [self.tableViewHelper addSection:section];
             [self.tableViewHelper refresh];
-            
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                YHNewsSection* section = [[YHNewsSection alloc]initWithCells:nil];
-                YHNewsCell *cell = [YHNewsCell new];
-                [cell setMyText:@"测试测试"];
-                [section addCell:cell];
-                [self.tableViewHelper addSection:section immediate:YES animation:UITableViewRowAnimationLeft];
-            });
         }
     }];
 }
@@ -60,6 +52,16 @@
     self.title = NSStringFromClass([self class]);
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self.view setBackgroundColor:[UIColor whiteColor]];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Add" style:UIBarButtonItemStylePlain target:self action:@selector(addAction)];
+}
+
+-(void)addAction{
+    YHNewsSectionElement* section = [[YHNewsSectionElement alloc]initWithCells:nil];
+    YHNewsCellElement *cell = [YHNewsCellElement new];
+    [cell setMyText:@"测试测试"];
+    [section addCell:cell];
+    [self.tableViewHelper addSection:section immediate:YES animation:UITableViewRowAnimationLeft];
 }
 
 -(void)setupContentView{
@@ -106,7 +108,13 @@
 }
 
 #pragma mark -- YHTableViewHelperDelegate
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath cellElement:(YHTableCellDataSource *)cell{
+    YHNewsCellElement *cellElement = (YHNewsCellElement *)cell;
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"title" message:cellElement.myText preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    }];
+    [alertController addAction:action];
+    [self presentViewController:alertController animated:YES completion:nil];
     
 }
 

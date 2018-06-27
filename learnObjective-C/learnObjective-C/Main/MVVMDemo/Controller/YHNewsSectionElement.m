@@ -6,16 +6,16 @@
 //  Copyright © 2018 peng yihan. All rights reserved.
 //
 
-#import "YHNewsSection.h"
+#import "YHNewsSectionElement.h"
 
-@implementation YHNewsSection
+@implementation YHNewsSectionElement
 
 - (CGFloat)heightForHeaderInSection{
-    return 40;
+    return 0;
 }
 
 - (CGFloat)heightForFooterInSection{
-    return 40;
+    return 0;
 }
 
 - (nullable UIView *)viewForHeaderInSection{

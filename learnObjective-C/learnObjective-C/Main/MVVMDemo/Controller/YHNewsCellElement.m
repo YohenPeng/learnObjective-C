@@ -6,14 +6,13 @@
 //  Copyright © 2018 peng yihan. All rights reserved.
 //
 
-#import "YHNewsCell.h"
+#import "YHNewsCellElement.h"
 #import "YHNewsTableCell.h"
 
-@interface YHNewsCell ()
-@property(copy,nonatomic)NSString *myString;
+@interface YHNewsCellElement ()
 @end
 
-@implementation YHNewsCell
+@implementation YHNewsCellElement
 
 -(CGFloat)heightForCell{
     return 40;
@@ -29,11 +28,8 @@
 
 -(void)willDisplay:(UITableViewCell *)tableViewCell{
     YHNewsTableCell *cell = (YHNewsTableCell *)tableViewCell;
-    cell.textLabel.text = self.myString;
+    cell.textLabel.text = self.myText;
 }
 
--(void)setMyText:(NSString *)string{
-    self.myString = string;
-}
 
 @end

@@ -8,8 +8,8 @@
 
 #import "YHTableCellDataSource.h"
 
-@interface YHNewsCell : YHTableCellDataSource
+@interface YHNewsCellElement : YHTableCellDataSource
 
--(void)setMyText:(NSString *)string;
+@property(copy,nonatomic)NSString *myText;
 
 @end

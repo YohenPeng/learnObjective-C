@@ -172,8 +172,10 @@ static CGFloat const kYHTableViewDefaultRowHeight = 44;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (self.delegate && [self.delegate respondsToSelector:@selector(tableView:didSelectRowAtIndexPath:)]) {
-        [self.delegate tableView:tableView didSelectRowAtIndexPath:indexPath];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(tableView:didSelectRowAtIndexPath:cellElement:)]) {
+        YHTableSectionDataSource *section = [self.sectionsArray objectAtIndex:indexPath.section];
+        YHTableCellDataSource *cell = [section.cellArray objectAtIndex:indexPath.row];
+        [self.delegate tableView:tableView didSelectRowAtIndexPath:indexPath cellElement:cell];
     }
 }
 

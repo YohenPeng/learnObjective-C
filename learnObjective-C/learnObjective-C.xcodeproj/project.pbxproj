@@ -38,8 +38,8 @@
 		E5BE847D20E1EE91002168DB /* YHTableViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BE847C20E1EE91002168DB /* YHTableViewHelper.m */; };
 		E5BE848020E1EED3002168DB /* YHTableSectionDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BE847F20E1EED3002168DB /* YHTableSectionDataSource.m */; };
 		E5BE848320E1EEEC002168DB /* YHTableCellDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BE848220E1EEEC002168DB /* YHTableCellDataSource.m */; };
-		E5BE848B20E273BF002168DB /* YHNewsSection.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BE848A20E273BF002168DB /* YHNewsSection.m */; };
-		E5BE848E20E27424002168DB /* YHNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BE848D20E27424002168DB /* YHNewsCell.m */; };
+		E5BE848B20E273BF002168DB /* YHNewsSectionElement.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BE848A20E273BF002168DB /* YHNewsSectionElement.m */; };
+		E5BE848E20E27424002168DB /* YHNewsCellElement.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BE848D20E27424002168DB /* YHNewsCellElement.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,10 +103,10 @@
 		E5BE848120E1EEEC002168DB /* YHTableCellDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHTableCellDataSource.h; sourceTree = "<group>"; };
 		E5BE848220E1EEEC002168DB /* YHTableCellDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHTableCellDataSource.m; sourceTree = "<group>"; };
 		E5BE848620E229E3002168DB /* YHTableViewHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHTableViewHelper.h; sourceTree = "<group>"; };
-		E5BE848920E273BF002168DB /* YHNewsSection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHNewsSection.h; sourceTree = "<group>"; };
-		E5BE848A20E273BF002168DB /* YHNewsSection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHNewsSection.m; sourceTree = "<group>"; };
-		E5BE848C20E27424002168DB /* YHNewsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHNewsCell.h; sourceTree = "<group>"; };
-		E5BE848D20E27424002168DB /* YHNewsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHNewsCell.m; sourceTree = "<group>"; };
+		E5BE848920E273BF002168DB /* YHNewsSectionElement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHNewsSectionElement.h; sourceTree = "<group>"; };
+		E5BE848A20E273BF002168DB /* YHNewsSectionElement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHNewsSectionElement.m; sourceTree = "<group>"; };
+		E5BE848C20E27424002168DB /* YHNewsCellElement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHNewsCellElement.h; sourceTree = "<group>"; };
+		E5BE848D20E27424002168DB /* YHNewsCellElement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHNewsCellElement.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,10 +263,10 @@
 			children = (
 				E5BE846E20E0CBCB002168DB /* YHNewsViewController.h */,
 				E5BE846F20E0CBCB002168DB /* YHNewsViewController.m */,
-				E5BE848920E273BF002168DB /* YHNewsSection.h */,
-				E5BE848A20E273BF002168DB /* YHNewsSection.m */,
-				E5BE848C20E27424002168DB /* YHNewsCell.h */,
-				E5BE848D20E27424002168DB /* YHNewsCell.m */,
+				E5BE848920E273BF002168DB /* YHNewsSectionElement.h */,
+				E5BE848A20E273BF002168DB /* YHNewsSectionElement.m */,
+				E5BE848C20E27424002168DB /* YHNewsCellElement.h */,
+				E5BE848D20E27424002168DB /* YHNewsCellElement.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -405,7 +405,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5BD3D28206E1B340035B2E8 /* YHMainRLTaskManager.m in Sources */,
-				E5BE848E20E27424002168DB /* YHNewsCell.m in Sources */,
+				E5BE848E20E27424002168DB /* YHNewsCellElement.m in Sources */,
 				E5BE847D20E1EE91002168DB /* YHTableViewHelper.m in Sources */,
 				E56B812E206E246F0034C691 /* YHTimer.m in Sources */,
 				9EEF7C6D209863E900818C08 /* YHTestUILabelViewController.m in Sources */,
@@ -415,7 +415,7 @@
 				E50FC52B20BE43C8003A2FEC /* HYCountDownBtn.m in Sources */,
 				E52FED5820525F8B00734A99 /* YHTableView.m in Sources */,
 				9E5D9210207058C900B3F97F /* YHOutScreenShotController.m in Sources */,
-				E5BE848B20E273BF002168DB /* YHNewsSection.m in Sources */,
+				E5BE848B20E273BF002168DB /* YHNewsSectionElement.m in Sources */,
 				E5BE847A20E0DAB6002168DB /* YHNewsModel.m in Sources */,
 				E52FED3F20525BC800734A99 /* main.m in Sources */,
 				E52FED4820525CB100734A99 /* YHMainViewController.m in Sources */,

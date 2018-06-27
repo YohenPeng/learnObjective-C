@@ -9,10 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+@class YHTableCellDataSource;
+
 @protocol YHTableViewHelperDelegate <NSObject>
 
 @optional
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath cellElement:(YHTableCellDataSource*)cell;
 -(UIView*)tableHeaderView;
 -(UIView*)tableFooterView;
 
