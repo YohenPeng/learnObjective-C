@@ -39,6 +39,6 @@
 
 -(BOOL)refresh;
 
-@property(assign,nonatomic)id<YHTableViewHelperDelegate> delegate;
+@property(weak,nonatomic)id<YHTableViewHelperDelegate> delegate;
 
 @end

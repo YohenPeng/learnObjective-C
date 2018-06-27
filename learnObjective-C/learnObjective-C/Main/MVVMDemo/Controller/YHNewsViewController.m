@@ -15,7 +15,7 @@
 #import "YHNewsSection.h"
 #import "YHNewsCell.h"
 
-@interface YHNewsViewController ()
+@interface YHNewsViewController ()<YHTableViewHelperDelegate>
 @property(strong,nonatomic)UITableView *newsTableView;
 @property(strong,nonatomic)YHNewsViewModel *newsViewModel;
 @property(strong,nonatomic)YHTableViewHelper *tableViewHelper;
@@ -46,9 +46,11 @@
             [self.tableViewHelper refresh];
             
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                YHNewsSection* section = [[YHNewsSection alloc]initWithCells:nil];
                 YHNewsCell *cell = [YHNewsCell new];
                 [cell setMyText:@"测试测试"];
-                [section addCell:cell immediate:YES animation:UITableViewRowAnimationLeft];
+                [section addCell:cell];
+                [self.tableViewHelper addSection:section immediate:YES animation:UITableViewRowAnimationLeft];
             });
         }
     }];
@@ -64,6 +66,13 @@
     [self newsTableView];
     
 }
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark -- lazy object
 
 -(UITableView *)newsTableView{
     if (!_newsTableView) {
@@ -83,13 +92,9 @@
 -(YHTableViewHelper *)tableViewHelper{
     if (!_tableViewHelper) {
         _tableViewHelper = [[YHTableViewHelper alloc]initWithTableView:self.newsTableView sections:nil];
+        _tableViewHelper.delegate = self;
     }
     return _tableViewHelper;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark -- lazy object
@@ -100,7 +105,22 @@
     return _newsViewModel;
 }
 
+#pragma mark -- YHTableViewHelperDelegate
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
 
+-(UIView *)tableHeaderView{
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 100)];
+    view.backgroundColor = [UIColor blueColor];
+    return view;
+}
+
+-(UIView *)tableFooterView{
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 100)];
+    view.backgroundColor = [UIColor yellowColor];
+    return view;
+}
 
 
 /*

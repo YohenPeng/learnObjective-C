@@ -8,8 +8,6 @@
 
 #import "YHNewsSection.h"
 
-
-
 @implementation YHNewsSection
 
 - (CGFloat)heightForHeaderInSection{
