@@ -61,7 +61,7 @@
     YHNewsCellElement *cell = [YHNewsCellElement new];
     [cell setMyText:@"测试测试"];
     [section addCell:cell];
-    [self.tableViewHelper addSection:section immediate:YES animation:UITableViewRowAnimationLeft];
+    [self.tableViewHelper addSection:section immediate:YES animation:UITableViewRowAnimationTop];
 }
 
 -(void)setupContentView{
