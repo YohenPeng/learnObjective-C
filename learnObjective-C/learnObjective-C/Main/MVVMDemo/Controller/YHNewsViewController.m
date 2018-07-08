@@ -57,6 +57,7 @@
 }
 
 -(void)addAction{
+    //ceshi
     YHNewsSectionElement* section = [[YHNewsSectionElement alloc]initWithCells:nil];
     YHNewsCellElement *cell = [YHNewsCellElement new];
     [cell setMyText:@"测试测试"];
